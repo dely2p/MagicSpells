@@ -12,16 +12,16 @@
 
 - main
 
-<img src="img/main.PNG" width="50%">
+<img src="img/main.png" width="50%">
 
 - C button & R button clicked
 
-<img src="img/create.PNG" width="50%"><img src="img/readConsole.PNG" width="50%">
+<img src="img/create.png" width="50%"><img src="img/readConsole.png" width="50%">
 
 - U button & R button clicked
 
-<img src="img/update.PNG" width="50%"><img src="img/readConsole2.PNG" width="50%">
+<img src="img/update.png" width="50%"><img src="img/readConsole2.png" width="50%">
 
 - D button & R button clicked
 
-<img src="img/delete.PNG" width="50%"><img src="img/readConsole3.PNG" width="50%">
+<img src="img/delete.png" width="50%"><img src="img/readConsole3.png" width="50%">

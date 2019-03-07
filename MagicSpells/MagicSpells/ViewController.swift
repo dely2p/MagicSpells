@@ -21,7 +21,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     @IBAction func createDataButton(_ sender: Any) {
-        Alamofire.request("http://harry-server-zdnnh.run.goorm.io/addUser/\(self.userNameLabel.text!)", method: .post, parameters: ["name" : self.nameLabel.text!, "password" : self.passwordLabel.text!]).validate().responseJSON { response in
+        guard let name = self.nameLabel.text else {
+            return
+        }
+        guard let password = self.passwordLabel.text else {
+            return
+        }
+        print(name)
+        print(password)
+        Alamofire.request("http://myband.run.goorm.io/addUser/\(self.userNameLabel.text!)", method: .post, parameters: ["name" : name, "password" : password]).validate().responseJSON { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
@@ -30,13 +38,36 @@ class ViewController: UIViewController {
                 print(error)
             }
         }
+//        Alamofire.request("http://myband.run.goorm.io/addUser/dely", method: .post, parameters: dic).validate().responseJSON { response in
+//            switch response.result {
+//            case .success(let value):
+//                let json = JSON(value)
+//                print("JSON: \(json)")
+//            case .failure(let error):
+//
+//                print(error)
+//            }
+//        }
+//        Alamofire.request("http://memolease.ipdisk.co.kr:1337/fortunes", method: .post, parameters: ["content" : self.userNameLabel.text!]).validate().responseJSON { response in
+//            switch response.result {
+//            case .success(let value):
+//                let json = JSON(value)
+//                print("JSON: \(json)")
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
+        
+        
+//        print(self.nameLabel.text!)
+//        print(self.passwordLabel.text!)
         userNameLabel.text = ""
         nameLabel.text = ""
         passwordLabel.text = ""
     }
     
     @IBAction func readDataButton(_ sender: Any) {
-        Alamofire.request("http://harry-server-zdnnh.run.goorm.io/list", method: .get).validate().responseJSON { response in
+        Alamofire.request("http://myband.run.goorm.io/list", method: .get).validate().responseJSON { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
@@ -49,7 +80,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func updateDataButton(_ sender: Any) {
-        Alamofire.request("http://harry-server-zdnnh.run.goorm.io/updateUser/\(self.userNameLabel.text!)", method: .put, parameters: ["name" : self.nameLabel.text!, "password" : self.passwordLabel.text!]).validate().responseJSON { response in
+        Alamofire.request("http://myband.run.goorm.io/updateUser/\(self.userNameLabel.text!)", method: .put, parameters: ["name" : self.nameLabel.text!, "password" : self.passwordLabel.text!]).validate().responseJSON { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
@@ -64,7 +95,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func deleteDataButton(_ sender: Any) {
-        Alamofire.request("http://harry-server-zdnnh.run.goorm.io/deleteUser/\(self.userNameLabel.text!)", method: .delete).validate().responseJSON { response in
+        Alamofire.request("http://myband.run.goorm.io/deleteUser/\(self.userNameLabel.text!)", method: .delete).validate().responseJSON { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)

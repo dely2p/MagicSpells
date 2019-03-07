@@ -1,5 +1,7 @@
 # MagicSpells
 
+## step 1
+
 > 기능
 
 - 각 4개의 버튼을 누르면 서버와 연동하여 CRUD(Create, Read, Update, Delete) 기능을 가짐
@@ -12,16 +14,25 @@
 
 - main
 
-<img src="img/main.png" width="50%">
+<img src="img/main.png" width="40%">
 
 - C button & R button clicked
 
-<img src="img/create.png" width="50%"><img src="img/readConsole.png" width="50%">
+<img src="img/create.png" width="40%"><img src="img/readConsole.png" width="40%">
 
 - U button & R button clicked
 
-<img src="img/update.png" width="50%"><img src="img/readConsole2.png" width="50%">
+<img src="img/update.png" width="40%"><img src="img/readConsole2.png" width="40%">
 
 - D button & R button clicked
 
-<img src="img/delete.png" width="50%"><img src="img/readConsole3.png" width="50%">
+<img src="img/delete.png" width="40%"><img src="img/readConsole3.png" width="40%">
+
+## step 2
+
+> 서버 추가
+
+- MagicSpells에서 사용 할 data(spell, effect, source)를 json형태로 만들어주는 서버 구현.
+- 마법주문 list 출력, 마법주문 추가 기능 구현
+
+<img src="img/magicSpellsList.png" width="100%">

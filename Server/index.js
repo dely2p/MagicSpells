@@ -1,4 +1,6 @@
 var express = require("express");
+var request = require('request');
+var cheerio = require('cheerio');
 var app = express();
 var bodyParser = require("body-parser");
 var session = require("express-session");
@@ -25,4 +27,44 @@ app.use(
   })
 );
 
+var options = {
+	encoding: "utf-8",
+	method: "GET",
+	uri: "https://ko.wikipedia.org/wiki/%ED%95%B4%EB%A6%AC_%ED%8F%AC%ED%84%B0%EC%9D%98_%EB%A7%88%EB%B2%95_%EB%AA%A9%EB%A1%9D"
+};
+
+request(options, function(err,res,html){
+	var $ = cheerio.load(html);
+	var index = 5;
+	var magicSpells = {};
+
+	for(var i=0;i<11;i++){
+		if($("#mw-content-text > div > h2:nth-child("+index+")").text()!=""){
+			index++;
+		}
+		var title = $("#mw-content-text > div > ul:nth-child("+index+") > li > b").text();
+		var entitle = $("#mw-content-text > div > ul:nth-child("+index+") > li > span").text().replace('(', '').replace(')', '');
+		index++;
+
+		var effect = $("#mw-content-text > div > dl:nth-child("+index+") > dd:nth-child(1)").text();
+		var source = $("#mw-content-text > div > dl:nth-child("+index+") > dd:nth-child(2)").text();
+		index++;
+
+		var spell = {"title": title, "effect": effect, "source": source};
+		magicSpells[entitle] = spell;
+		// console.log(magicSpells[entitle]);
+	}
+	console.log(magicSpells);
+	module.exports = function(app, fs){
+		fs.writeFile(
+			__dirname + "/../data/spells.json",
+			JSON.stringify(magicSpells, null, "\t"),
+			"utf8",
+			function(err, data) {
+			  result = { success: 1 };
+			  console.log(result);
+			  console.log(err);
+		});
+	};
+});
 var router = require("./routes/main")(app, fs);

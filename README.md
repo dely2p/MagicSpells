@@ -36,3 +36,11 @@
 - 마법주문 list 출력, 마법주문 추가 기능 구현
 
 <img src="img/magicSpellsList.png" width="100%">
+
+> 크롤링 기능 추가
+
+- web에서 각 data(title, effect, source)를 크롤링하고, json 형태로 저장
+- web에서 일정하지 않은 data 예외처리 구현
+- 크롤링 사이트: https://ko.wikipedia.org/wiki/%ED%95%B4%EB%A6%AC_%ED%8F%AC%ED%84%B0%EC%9D%98_%EB%A7%88%EB%B2%95_%EB%AA%A9%EB%A1%9D
+
+<img src="img/crawlingList.png" width="100%">

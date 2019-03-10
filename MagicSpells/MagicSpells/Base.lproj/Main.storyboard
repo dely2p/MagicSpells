@@ -138,16 +138,16 @@
                 </tapGestureRecognizer>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="g7n-4n-e2J">
             <objects>
-                <viewController id="Y8c-Ed-7u7" sceneMemberID="viewController">
+                <viewController id="Y8c-Ed-7u7" customClass="SearchViewController" customModule="MagicSpells" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dhR-jz-U8I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="zMJ-mi-yzI">
-                                <rect key="frame" x="0.0" y="306" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="305.5" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
@@ -161,6 +161,9 @@
                         <viewLayoutGuide key="safeArea" id="c3G-8b-GZE"/>
                     </view>
                     <navigationItem key="navigationItem" id="tq0-s9-ZVE"/>
+                    <connections>
+                        <outlet property="magicSpellsSearchBar" destination="zMJ-mi-yzI" id="ajX-7M-g2h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i4z-ky-klE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

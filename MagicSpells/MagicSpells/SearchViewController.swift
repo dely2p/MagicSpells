@@ -10,8 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class SearchViewController: UIViewController, UISearchBarDelegate {
-    @IBOutlet weak var magicSpellsSearchBar: UISearchBar!
+class SearchViewController: UIViewController {
     var list: [HarryPotterMagicSpells] = {
         var dataList = [HarryPotterMagicSpells]()
         return dataList
@@ -19,12 +18,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        magicSpellsSearchBar.delegate = self
         searchMagicSpells()
-    }
-    
-    func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        return true
     }
     
     func searchMagicSpells() {

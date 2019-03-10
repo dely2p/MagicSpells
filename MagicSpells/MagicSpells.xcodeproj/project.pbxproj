@@ -16,6 +16,7 @@
 		A36917A82234D01F0033579A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36917A72234D01F0033579A /* SearchViewController.swift */; };
 		A36917AC2234E0430033579A /* HarryPotterMagicSpells.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36917AB2234E0430033579A /* HarryPotterMagicSpells.swift */; };
 		A36917AE2234E0ED0033579A /* SpellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36917AD2234E0ED0033579A /* SpellData.swift */; };
+		A36917B02234E81A0033579A /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36917AF2234E81A0033579A /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		A36917A72234D01F0033579A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A36917AB2234E0430033579A /* HarryPotterMagicSpells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryPotterMagicSpells.swift; sourceTree = "<group>"; };
 		A36917AD2234E0ED0033579A /* SpellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellData.swift; sourceTree = "<group>"; };
+		A36917AF2234E81A0033579A /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		B81D38E7E6856FD3560740CC /* Pods_MagicSpells.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagicSpells.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -70,6 +72,7 @@
 				A32CB23A221EFC1800970F9D /* AppDelegate.swift */,
 				A32CB23C221EFC1800970F9D /* ViewController.swift */,
 				A32CB23E221EFC1800970F9D /* Main.storyboard */,
+				A36917AF2234E81A0033579A /* ResultViewController.swift */,
 				A32CB241221EFC1A00970F9D /* Assets.xcassets */,
 				A32CB243221EFC1A00970F9D /* LaunchScreen.storyboard */,
 				A32CB246221EFC1A00970F9D /* Info.plist */,
@@ -224,6 +227,7 @@
 				A32CB23B221EFC1800970F9D /* AppDelegate.swift in Sources */,
 				A36917AE2234E0ED0033579A /* SpellData.swift in Sources */,
 				A36917AC2234E0430033579A /* HarryPotterMagicSpells.swift in Sources */,
+				A36917B02234E81A0033579A /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -149,6 +149,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLw-Gs-MgB">
                                 <rect key="frame" x="10" y="318.5" width="355" height="30"/>
                                 <state key="normal" title="검색"/>
+                                <connections>
+                                    <action selector="searchBarButton:" destination="Y8c-Ed-7u7" eventType="touchUpInside" id="oH1-jt-DKN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -161,6 +164,9 @@
                         <viewLayoutGuide key="safeArea" id="c3G-8b-GZE"/>
                     </view>
                     <navigationItem key="navigationItem" id="tq0-s9-ZVE"/>
+                    <connections>
+                        <segue destination="rja-md-JyB" kind="show" identifier="showResultView" id="gBC-nl-HrS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i4z-ky-klE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -175,7 +181,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZTO-H9-EcI">
-                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -183,7 +189,7 @@
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A6R-SM-OBd">
-                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
+                                <rect key="frame" x="0.0" y="120" width="375" height="498"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="spellCell" textLabel="JPA-6f-HXa" rowHeight="55" style="IBUITableViewCellStyleDefault" id="Clh-q5-4vJ">

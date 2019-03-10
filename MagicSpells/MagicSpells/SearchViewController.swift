@@ -16,6 +16,7 @@ class SearchViewController: UIViewController {
         return dataList
     }()
     
+    @IBOutlet weak var searchBarButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         searchMagicSpells()
@@ -42,4 +43,16 @@ class SearchViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func searchBarButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "showResultView", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showResultView"{
+            let resultView = segue.destination as! ResultViewController
+            resultView.list = self.list
+        }
+    }
+    
 }

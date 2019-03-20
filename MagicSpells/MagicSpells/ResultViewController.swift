@@ -9,7 +9,6 @@
 import UIKit
 
 class ResultViewController: UIViewController, UISearchResultsUpdating {
-    @IBOutlet weak var magicSpellsSearchBar: UISearchBar!
     @IBOutlet weak var magicSpellsTableView: UITableView!
     var list: [HarryPotterMagicSpells] = {
         var dataList = [HarryPotterMagicSpells]()
@@ -28,15 +27,19 @@ class ResultViewController: UIViewController, UISearchResultsUpdating {
         searchController.hidesNavigationBarDuringPresentation = false
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        searchController.isActive = true
+        DispatchQueue.main.async{
+            self.searchController.searchBar.becomeFirstResponder()
+        }
+    }
+    
     func updateSearchResults(for searchController: UISearchController) {
         if let searchText = searchController.searchBar.text {
             searchSpells = spells.filter({$0.prefix(searchText.count).uppercased() == searchText.uppercased()})
             print(searchSpells)
             searching = true
             self.magicSpellsTableView.reloadData()
-//            filterContent(for: searchText)
-//            // Reload the table view with the search result data.
-//            tableView.reloadData()
         }
     }
 }

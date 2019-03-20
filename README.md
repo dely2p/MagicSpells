@@ -44,3 +44,27 @@
 - 크롤링 사이트: https://ko.wikipedia.org/wiki/%ED%95%B4%EB%A6%AC_%ED%8F%AC%ED%84%B0%EC%9D%98_%EB%A7%88%EB%B2%95_%EB%AA%A9%EB%A1%9D
 
 <img src="img/crawlingList.png" width="100%">
+
+## step 3
+
+> 서버 위치 이동(GCP)
+
+- http://34.85.30.131:3000/list
+
+> Realtime Search 기능 추가
+
+- UISearchResultsUpdating 프로토콜 updateSearchResults() 메소드 사용
+- updateSearchResults() 메소드 안에서 사용자가 작성하는 검색어와 마법주문을 비교하여 같은 word로 시작하는 것을 테이블뷰에 출력하도록 구현
+
+> sketch를 사용하여 free이미지 편집 및 추가
+
+- Search Box 이미지 사용
+
+> Tab Bar 추가
+
+- Search(home), History, Favorite(my spells) 구성 예정
+
+> 실행화면
+
+<img src="img/3_1_main.png" width="40%"> <img src="img/3_2_all.png" width="40%">
+<img src="img/3_3_a.png" width="40%"> <img src="img/3_4_av.png" width="40%">

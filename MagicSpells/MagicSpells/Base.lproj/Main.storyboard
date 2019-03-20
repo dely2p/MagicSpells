@@ -163,7 +163,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c3G-8b-GZE"/>
                     </view>
-                    <navigationItem key="navigationItem" id="tq0-s9-ZVE"/>
+                    <navigationItem key="navigationItem" id="tq0-s9-ZVE">
+                        <barButtonItem key="backBarButtonItem" title=" " id="fln-04-wH6"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="rja-md-JyB" kind="show" identifier="showResultView" id="gBC-nl-HrS"/>
                     </connections>
@@ -180,16 +182,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZTO-H9-EcI">
-                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="rja-md-JyB" id="9Ut-WR-TgG"/>
-                                </connections>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A6R-SM-OBd">
-                                <rect key="frame" x="0.0" y="120" width="375" height="498"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="spellCell" textLabel="JPA-6f-HXa" rowHeight="55" style="IBUITableViewCellStyleDefault" id="Clh-q5-4vJ">
@@ -218,18 +212,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ZTO-H9-EcI" firstAttribute="leading" secondItem="cUv-bq-bFA" secondAttribute="leading" id="09T-J4-R42"/>
-                            <constraint firstItem="ZTO-H9-EcI" firstAttribute="top" secondItem="cUv-bq-bFA" secondAttribute="top" id="JRU-8c-2ET"/>
                             <constraint firstItem="cUv-bq-bFA" firstAttribute="trailing" secondItem="A6R-SM-OBd" secondAttribute="trailing" id="O1Q-tP-NN1"/>
+                            <constraint firstItem="A6R-SM-OBd" firstAttribute="top" secondItem="cUv-bq-bFA" secondAttribute="top" id="TBl-kK-ViJ"/>
                             <constraint firstItem="A6R-SM-OBd" firstAttribute="leading" secondItem="cUv-bq-bFA" secondAttribute="leading" id="eWG-bq-kDG"/>
-                            <constraint firstItem="A6R-SM-OBd" firstAttribute="top" secondItem="ZTO-H9-EcI" secondAttribute="bottom" id="hDj-Vv-R2A"/>
-                            <constraint firstItem="ZTO-H9-EcI" firstAttribute="trailing" secondItem="cUv-bq-bFA" secondAttribute="trailing" id="obf-UW-L63"/>
                             <constraint firstItem="cUv-bq-bFA" firstAttribute="bottom" secondItem="A6R-SM-OBd" secondAttribute="bottom" id="tQu-5R-14C"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cUv-bq-bFA"/>
                     </view>
                     <connections>
-                        <outlet property="magicSpellsSearchBar" destination="ZTO-H9-EcI" id="EQT-1D-mQT"/>
                         <outlet property="magicSpellsTableView" destination="A6R-SM-OBd" id="29Z-sy-NVL"/>
                         <outlet property="searchDisplayController" destination="Yxi-BM-ub8" id="T4C-4K-P9Q"/>
                     </connections>
@@ -238,7 +228,6 @@
                 <searchDisplayController id="Yxi-BM-ub8">
                     <connections>
                         <outlet property="delegate" destination="rja-md-JyB" id="JxX-eV-uoK"/>
-                        <outlet property="searchBar" destination="ZTO-H9-EcI" id="uyX-eN-AFa"/>
                         <outlet property="searchContentsController" destination="rja-md-JyB" id="JRz-fh-dir"/>
                         <outlet property="searchResultsDataSource" destination="rja-md-JyB" id="ekh-mK-yEe"/>
                         <outlet property="searchResultsDelegate" destination="rja-md-JyB" id="Jp8-6b-Hbf"/>
@@ -272,6 +261,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="jFP-H1-9Q1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="l8D-7o-PQl">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

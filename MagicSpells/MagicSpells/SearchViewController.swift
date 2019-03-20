@@ -20,10 +20,20 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchMagicSpells()
+//        Alamofire.request("http://34.85.30.131:3000/list", method: .get, encoding: URLEncoding.default).validate().responseJSON { response in
+//            switch response.result {
+//            case .success(let value):
+//                print(value)
+//                let json = JSON(value)
+//                print("JSON: \(json)")
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
     }
     
     func searchMagicSpells() {
-        Alamofire.request("http://magicspells.run.goorm.io/list", method: .get).validate().responseJSON { response in
+        Alamofire.request("http://34.85.30.131:3000/list", method: .get).validate().responseJSON { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
@@ -39,6 +49,7 @@ class SearchViewController: UIViewController {
                     self.list.append(spell)
                 }
             case .failure(let error):
+                print("error")
                 print(error)
             }
         }
@@ -52,6 +63,7 @@ class SearchViewController: UIViewController {
         if segue.identifier == "showResultView"{
             let resultView = segue.destination as! ResultViewController
             resultView.list = self.list
+            resultView.spells = self.list.map({$0.spellTitle ?? ""})
         }
     }
     

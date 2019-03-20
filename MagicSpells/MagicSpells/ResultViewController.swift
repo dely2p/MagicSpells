@@ -8,26 +8,67 @@
 
 import UIKit
 
-class ResultViewController: UIViewController {
-
+class ResultViewController: UIViewController, UISearchResultsUpdating {
     @IBOutlet weak var magicSpellsSearchBar: UISearchBar!
     @IBOutlet weak var magicSpellsTableView: UITableView!
     var list: [HarryPotterMagicSpells] = {
         var dataList = [HarryPotterMagicSpells]()
         return dataList
     }()
+    var spells = [String]()
+    var searchSpells = [String]()
+    var searching = false
+    let searchController = UISearchController(searchResultsController: nil)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchController.searchResultsUpdater = self
+        self.definesPresentationContext = true
+        self.navigationItem.titleView = searchController.searchBar
+        searchController.hidesNavigationBarDuringPresentation = false
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text {
+            searchSpells = spells.filter({$0.prefix(searchText.count).uppercased() == searchText.uppercased()})
+            print(searchSpells)
+            searching = true
+            self.magicSpellsTableView.reloadData()
+//            filterContent(for: searchText)
+//            // Reload the table view with the search result data.
+//            tableView.reloadData()
+        }
     }
 }
 
 extension ResultViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.count
+        if searching {
+            return searchSpells.count
+        }else {
+            return list.count
+        }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "spellCell")
-        cell?.textLabel?.text = list[indexPath.row].spellTitle
-        return cell!
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "spellCell") {
+            if searching {
+                cell.textLabel?.text = searchSpells[indexPath.row]
+            }else {
+                cell.textLabel?.text = list[indexPath.row].spellTitle
+            }
+            
+            return cell
+        }
+        return UITableViewCell()
+    }
+}
+
+extension ResultViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
+        searchSpells = spells.filter({$0.prefix(searchText.count).uppercased() == searchText.uppercased()})
+        print(searchSpells)
+        searching = true
+        self.magicSpellsTableView.reloadData()
     }
 }

@@ -53,12 +53,36 @@
 
 > Realtime Search 기능 추가
 
+- SearchBar 추가(programmatically)
+	
+	```swift
+	self.definesPresentationContext = true
+   self.navigationItem.titleView = searchController.searchBar
+   searchController.hidesNavigationBarDuringPresentation = false
+	```
+	
+	- 최상위 ViewController를 찾아서 그 view의 위에 SearchBar를 표시하기 위함
+	- navigationBar titleView 부분에 SearchBar 추가
+	- 검색 시 navigationBar를 사라지게 할지 설정
+	
 - UISearchResultsUpdating 프로토콜 updateSearchResults() 메소드 사용
 - updateSearchResults() 메소드 안에서 사용자가 작성하는 검색어와 마법주문을 비교하여 같은 word로 시작하는 것을 테이블뷰에 출력하도록 구현
+
+	```swift
+	func updateSearchResults(for searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text {
+            searchSpells = spells.filter({$0.prefix(searchText.count).uppercased() == searchText.uppercased()})
+            print(searchSpells)
+            searching = true
+            self.magicSpellsTableView.reloadData()
+        }
+    }
+	```
 
 > sketch를 사용하여 free이미지 편집 및 추가
 
 - Search Box 이미지 사용
+	- https://www.sketchappsources.com/free-source/2-layout-ui-kit-template.html
 
 > Tab Bar 추가
 

@@ -146,9 +146,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLw-Gs-MgB">
-                                <rect key="frame" x="10" y="318.5" width="355" height="30"/>
-                                <state key="normal" title="검색"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLw-Gs-MgB">
+                                <rect key="frame" x="10" y="313.5" width="355" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="dqb-gz-67U"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="searchBar3"/>
                                 <connections>
                                     <action selector="searchBarButton:" destination="Y8c-Ed-7u7" eventType="touchUpInside" id="oH1-jt-DKN"/>
                                 </connections>
@@ -274,4 +277,7 @@
             <point key="canvasLocation" x="1037.5999999999999" y="98.50074962518741"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="searchBar3" width="242" height="34"/>
+    </resources>
 </document>

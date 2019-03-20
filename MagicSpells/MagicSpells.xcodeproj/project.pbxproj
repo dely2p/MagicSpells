@@ -11,12 +11,12 @@
 		A32CB23B221EFC1800970F9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32CB23A221EFC1800970F9D /* AppDelegate.swift */; };
 		A32CB23D221EFC1800970F9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32CB23C221EFC1800970F9D /* ViewController.swift */; };
 		A32CB240221EFC1800970F9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A32CB23E221EFC1800970F9D /* Main.storyboard */; };
-		A32CB242221EFC1A00970F9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A32CB241221EFC1A00970F9D /* Assets.xcassets */; };
 		A32CB245221EFC1A00970F9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A32CB243221EFC1A00970F9D /* LaunchScreen.storyboard */; };
 		A36917A82234D01F0033579A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36917A72234D01F0033579A /* SearchViewController.swift */; };
 		A36917AC2234E0430033579A /* HarryPotterMagicSpells.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36917AB2234E0430033579A /* HarryPotterMagicSpells.swift */; };
 		A36917AE2234E0ED0033579A /* SpellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36917AD2234E0ED0033579A /* SpellData.swift */; };
 		A36917B02234E81A0033579A /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36917AF2234E81A0033579A /* ResultViewController.swift */; };
+		A3DF3B542242966E003A0F9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3DF3B532242966E003A0F9F /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,13 +26,13 @@
 		A32CB23A221EFC1800970F9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A32CB23C221EFC1800970F9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A32CB23F221EFC1800970F9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A32CB241221EFC1A00970F9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A32CB244221EFC1A00970F9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A32CB246221EFC1A00970F9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A36917A72234D01F0033579A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A36917AB2234E0430033579A /* HarryPotterMagicSpells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryPotterMagicSpells.swift; sourceTree = "<group>"; };
 		A36917AD2234E0ED0033579A /* SpellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellData.swift; sourceTree = "<group>"; };
 		A36917AF2234E81A0033579A /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		A3DF3B532242966E003A0F9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B81D38E7E6856FD3560740CC /* Pods_MagicSpells.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagicSpells.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -72,8 +72,8 @@
 				A32CB23A221EFC1800970F9D /* AppDelegate.swift */,
 				A32CB23C221EFC1800970F9D /* ViewController.swift */,
 				A32CB23E221EFC1800970F9D /* Main.storyboard */,
+				A3DF3B532242966E003A0F9F /* Assets.xcassets */,
 				A36917AF2234E81A0033579A /* ResultViewController.swift */,
-				A32CB241221EFC1A00970F9D /* Assets.xcassets */,
 				A32CB243221EFC1A00970F9D /* LaunchScreen.storyboard */,
 				A32CB246221EFC1A00970F9D /* Info.plist */,
 				A36917A72234D01F0033579A /* SearchViewController.swift */,
@@ -161,7 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A32CB245221EFC1A00970F9D /* LaunchScreen.storyboard in Resources */,
-				A32CB242221EFC1A00970F9D /* Assets.xcassets in Resources */,
+				A3DF3B542242966E003A0F9F /* Assets.xcassets in Resources */,
 				A32CB240221EFC1800970F9D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

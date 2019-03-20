@@ -65,13 +65,3 @@ extension ResultViewController: UITableViewDelegate, UITableViewDataSource {
         return UITableViewCell()
     }
 }
-
-extension ResultViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
-        searchSpells = spells.filter({$0.prefix(searchText.count).uppercased() == searchText.uppercased()})
-        print(searchSpells)
-        searching = true
-        self.magicSpellsTableView.reloadData()
-    }
-}

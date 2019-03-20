@@ -83,6 +83,7 @@
 
 - Search Box 이미지 사용
 	- https://www.sketchappsources.com/free-source/2-layout-ui-kit-template.html
+	- <img src="img/searchBar3.png" width="70%">
 
 > Tab Bar 추가
 
@@ -90,5 +91,6 @@
 
 > 실행화면
 
-<img src="img/3_1_main.png" width="40%"> <img src="img/3_2_all.png" width="40%">
-<img src="img/3_3_a.png" width="40%"> <img src="img/3_4_av.png" width="40%">
+<img src="img/3_1_main.png" width="40%"> <img src="img/3_2_All.png" width="40%">
+<img src="img/3_3_A.png" width="40%"> <img src="img/3_4_Av.png" width="40%">
+

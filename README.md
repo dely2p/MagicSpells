@@ -57,8 +57,8 @@
 	
 	```swift
 	self.definesPresentationContext = true
-   self.navigationItem.titleView = searchController.searchBar
-   searchController.hidesNavigationBarDuringPresentation = false
+	self.navigationItem.titleView = searchController.searchBar
+	searchController.hidesNavigationBarDuringPresentation = false
 	```
 	
 	- 최상위 ViewController를 찾아서 그 view의 위에 SearchBar를 표시하기 위함
@@ -83,7 +83,7 @@
 
 - Search Box 이미지 사용
 	- https://www.sketchappsources.com/free-source/2-layout-ui-kit-template.html
-	- <img src="img/searchBar3.png" width="70%">
+	- <img src="img/searchBar3.png" width="50%">
 
 > Tab Bar 추가
 
@@ -91,6 +91,6 @@
 
 > 실행화면
 
-<img src="img/3_1_main.png" width="40%"> <img src="img/3_2_All.png" width="40%">
-<img src="img/3_3_A.png" width="40%"> <img src="img/3_4_Av.png" width="40%">
+<img src="img/3_1_main.png" width="40%"> <img src="img/3_2.png" width="40%">
+<img src="img/3_3.png" width="40%"> <img src="img/3_4.png" width="40%">
 
